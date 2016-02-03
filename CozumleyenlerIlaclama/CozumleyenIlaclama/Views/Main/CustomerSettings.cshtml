@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "CustomerSettings";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="content-inner">
+    <div class="row">
+        <div class="col-xs-2">Firma Türleri</div>
+        <div class="col-xs-4 bosluk" id="m-tur-1"></div>
+        <button class="btn btn-primary col-xs-1 bosluk" id="tursil">SİL</button>
+        <button class="btn btn-danger col-xs-1 bosluk" id="turguncelle">GÜNCELLE</button>
+    </div>
+    <div class="row" id="turguncellediv" style="display:none">
+        <div class="col-xs-2">Firma Türü Güncelle</div>
+        <div class="col-xs-4 bosluk" id="m-tur-7"></div>
+        <button class="btn btn-warning col-xs-1 bosluk" id="turkaydet">KAYDET</button>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">Yeni Firma Türü</div>
+        <div class="col-xs-4 bosluk" id="m-tur-2"></div>
+        <button class="btn btn-primary col-xs-1 bosluk" id="turekle">YENİ EKLE</button>
+    </div>
+    <div class="row">
+        <hr />
+    </div>
+    <div class="row">
+        <div class="col-xs-2">Firma Tipleri</div>
+        <div class="col-xs-4 bosluk" id="m-tur-3"></div>
+        <button class="btn btn-primary col-xs-1 bosluk" id="tipsil">SİL</button>
+        <button class="btn btn-danger col-xs-1 bosluk" id="tipguncelle">GÜNCELLE</button>
+    </div>
+    <div class="row" id="tipguncellediv" style="display:none">
+        <div class="col-xs-2">Firma Türü Güncelle</div>
+        <div class="col-xs-4 bosluk" id="m-tur-8"></div>
+        <button class="btn btn-warning col-xs-1 bosluk" id="tipkaydet">KAYDET</button>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">Yeni Firma Tipi</div>
+        <div class="col-xs-4 bosluk" id="m-tur-4"></div>
+        <button class="btn btn-primary col-xs-1 bosluk" id="tipekle">YENİ EKLE</button>
+    </div>
+    <div class="row">
+        <hr />
+    </div>
+    <div class="row">
+        <div class="col-xs-2">Sektörler</div>
+        <div class="col-xs-4 bosluk" id="m-tur-5"></div>
+        <button class="btn btn-primary col-xs-1 bosluk" id="sektorsil">SİL</button>
+        <button class="btn btn-danger col-xs-1 bosluk" id="sektorguncelle">GÜNCELLE</button>
+    </div>
+    <div class="row" id="sektorguncellediv" style="display:none">
+        <div class="col-xs-2">Sektör Güncelle</div>
+        <div class="col-xs-4 bosluk" id="m-tur-9"></div>
+        <button class="btn btn-warning col-xs-1 bosluk" id="sektorkaydet">KAYDET</button>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">Yeni Sektör</div>
+        <div class="col-xs-4 bosluk" id="m-tur-6"></div>
+        <button class="btn btn-primary col-xs-1 bosluk" id="sektorekle">YENİ EKLE</button>
+    </div>
+    <div class="row">
+        <hr />
+    </div>
+    <div class="row">
+        <div class="col-xs-2">Firma Durumları</div>
+        <div class="col-xs-4 bosluk" id="m-tur-10"></div>
+        <button class="btn btn-primary col-xs-1 bosluk" id="durumsil">SİL</button>
+        <button class="btn btn-danger col-xs-1 bosluk" id="durumguncelle">GÜNCELLE</button>
+    </div>
+    <div class="row" id="durumguncellediv" style="display:none">
+        <div class="col-xs-2">Durum Güncelle</div>
+        <div class="col-xs-4 bosluk" id="m-tur-11"></div>
+        <button class="btn btn-warning col-xs-1 bosluk" id="durumkaydet">KAYDET</button>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">Yeni Durum</div>
+        <div class="col-xs-4 bosluk" id="m-tur-12"></div>
+        <button class="btn btn-primary col-xs-1 bosluk" id="durumekle">YENİ EKLE</button>
+    </div>
+</div>
+<script src="~/JS/PageScripts/customersettings.js"></script>
+<link href="~/Style/CustomerSettings.css" rel="stylesheet" />

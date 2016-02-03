@@ -1,0 +1,139 @@
+﻿body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .leftside {
+        width: 200px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+
+        .leftmenu {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background: #222222;
+
+            #username {
+                margin-top: 5px;
+                padding: 5px;
+                height: 40px;
+            }
+
+            ul {
+                margin: 5px;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    cursor: pointer;
+                }
+            }
+
+            & > ul {
+                font-family: 'Segoe UI','Thoma',Verdana, Geneva, sans-serif;
+                font-size: 14px;
+                color: ghostwhite;
+
+                li {
+                    padding: 8px 4px;
+
+                    &:not(.x-li-submenu):hover {
+                        box-shadow: #111 1px 3px 6px inset;
+                        background-color: #4a4740;
+                    }
+
+                    .m-icon {
+                        font-size: 20px;
+                    }
+
+                    .m-caption {
+                        margin-left: 15px;
+                    }
+
+                    .m-arrow {
+                        float: right;
+                        margin-right: 13px;
+                        margin-top: 3px;
+                    }
+                }
+
+                .x-li-submenu {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .rightside {
+        width: calc(~"100% - 200px");
+        margin-left: 200px;
+        height: 100%;
+        overflow: auto;
+
+        .topmenu {
+            height: 92px;
+            width: 100%;
+            background: rgba(45, 45, 45, 0.8);
+
+            .kutu {
+                padding: 5px;
+                height: 91px;
+                width: 155px;
+                background-color: rgba(45, 45, 45, 0.8);
+                float: left;
+                margin-left: 1px;
+                margin-bottom: 10px;
+                display: inline-block;
+                cursor:pointer;
+
+                    .t-icon {
+                        font-size: 30px;
+                        color: #3498db;
+                        -moz-transition: all .2s;
+                        -o-transition: all .2s;
+                        -webkit-transition: all .2s;
+                        transition: all .2s;
+                        width:100%;
+                        text-align:center;
+                        padding-top:7px;
+
+                    }
+
+                    .t-caption {
+                        font-family: 'Segoe UI','Thoma',Verdana, Geneva, sans-serif;
+                        font-size: 13px;
+                        color: ghostwhite;
+                        -moz-transition: all .2s;
+                        -o-transition: all .2s;
+                        -webkit-transition: all .2s;
+                        transition: all .2s;
+                        text-align: center;
+                        padding-top:12px;
+                    }
+                }
+            }
+
+            .kutu:hover {
+                box-shadow: #111 1px 3px 6px inset;
+
+                .t-icon {
+                    color: lightgreen;
+                }
+
+                .t-caption {
+                    color: lightgreen;
+                }
+            }
+        }
+
+    .content {
+        margin: 5px;
+        padding: 10px;
+    }
+
+}

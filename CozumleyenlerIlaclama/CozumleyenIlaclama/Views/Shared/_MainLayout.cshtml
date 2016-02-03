@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Style/normalize.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/External/globalize.min.js"></script>
+
+    <script src="~/External/locales/globalize.culture.tr-TR.js"></script>
+    <script src="~/External/locales/localization.default.js"></script>
+    <script src="~/External/locales/localization.tr.js"></script>
+    <script src="~/External/jszip.min.js"></script>
+    <script src="~/External/dx.all.js"></script>
+  
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/External/sweetalert.min.js"></script>
+    <script src="~/JS/general.js"></script>
+    <script src="~/JS/oUploader.js"></script>
+    <script src="~/Scripts/moment.js"></script>
+
+    <link href="~/External/font-awesome.css" rel="stylesheet" />
+    <link href="~/Style/bootstrap.css" rel="stylesheet" />
+    <link href="~/Style/MainPage.min.css" rel="stylesheet" />
+    <link href="~/External/dx.common.css" rel="stylesheet" />
+    <link href="~/External/dx.light.css" rel="stylesheet" />
+    <link href="~/External/sweetalert.css" rel="stylesheet" />
+   
+</head>
+<body>
+    <div class="leftside">
+        @Html.Partial("~/Views/Shared/_LeftMenuPartial.cshtml")
+    </div>
+    <div class="rightside">
+        <div class="topmenu">
+        </div>
+        <div class="content">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Employees";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<link href="~/Style/Customer.css" rel="stylesheet" />
+
+@*EMPLOYEE GRİD*@
+<div id="employeegrid">
+</div>
+@*PERSONEL EKLEME MODAL*@
+<div class="col-xs-12 modal fade" id="mdl-pe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" style="text-align:center">Personel Ekle</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-3 ">Fotograf</div>
+                    <div class="col-xs-8 " id="p-e-1" style="padding:0px; padding-bottom:3px;"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 ">Personel Ad</div>
+                    <div class="col-xs-8 " id="p-e-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 ">Soyad</div>
+                    <div class="col-xs-8 " id="p-e-3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 ">Sifre</div>
+                    <div class="col-xs-8 " id="p-e-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 ">Tekrar Şifre</div>
+                    <div class="col-xs-8 " id="p-e-10"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 ">Arac Plakası</div>
+                    <div class="col-xs-8 " id="p-e-5"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 ">Bölge</div>
+                    <div class="col-xs-8 " id="p-e-6"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 ">Adres</div>
+                    <div class="col-xs-8 " id="p-e-7"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 ">Email</div>
+                    <div class="col-xs-8 " id="p-e-8"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 ">Telefon No</div>
+                    <div class="col-xs-8 " id="p-e-9"></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-dismiss="modal" id="p-iptal" style="width:15%">İptal</button>
+                    <button class=" btn btn-primary" id="p-kaydet" style="width:15%; margin-right:4%">Kaydet</button>
+                    
+
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>
+@*BİTİŞ*@
+<script src="~/JS/PageScripts/employees.js"></script>

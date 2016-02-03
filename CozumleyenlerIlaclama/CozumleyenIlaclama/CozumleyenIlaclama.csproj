@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB96ACA6-8B9C-404D-ACE4-51EC6A51307B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CozumleyenIlaclama</RootNamespace>
+    <AssemblyName>CozumleyenIlaclama</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>false</IncludeIisSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="External\dx.all.js" />
+    <Content Include="External\dx.common.css" />
+    <Content Include="External\dx.light.css" />
+    <Content Include="External\font-awesome.css" />
+    <Content Include="External\fontawesome-webfont.svg" />
+    <Content Include="External\globalize.min.js" />
+    <Content Include="Image\Trash_Can-128.png" />
+    <Content Include="External\jszip.min.js" />
+    <Content Include="External\locales\globalize.culture.tr-TR.js" />
+    <Content Include="External\locales\localization.default.js" />
+    <Content Include="External\locales\localization.tr.js" />
+    <Content Include="External\sweetalert-dev.js" />
+    <Content Include="External\sweetalert.css" />
+    <Content Include="External\sweetalert.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="External\icons\dxicons.eot" />
+    <Content Include="External\icons\dxicons.ttf" />
+    <Content Include="External\icons\dxicons.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Image\nopicture.png" />
+    <Content Include="JS\general.js" />
+    <Content Include="JS\oUploader.js" />
+    <Content Include="JS\PageScripts\customers.js" />
+    <Content Include="JS\PageScripts\customer.js" />
+    <Content Include="JS\PageScripts\customersettings.js" />
+    <Content Include="JS\PageScripts\employee.js" />
+    <Content Include="JS\PageScripts\employees.js" />
+    <Content Include="JS\PageScripts\employeesettings.js" />
+    <Content Include="JS\PageScripts\Index.js" />
+    <Content Include="JS\PageScripts\Login.js" />
+    <Content Include="JS\PageScripts\services.js" />
+    <Content Include="JS\PageScripts\servicescalender.js" />
+    <Content Include="JS\PageScripts\servicesettings.js" />
+    <Content Include="JS\PageScripts\stationsettings.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <None Include="Scripts\jquery-2.2.0.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.0.js" />
+    <Content Include="Scripts\jquery-2.2.0.min.js" />
+    <Content Include="Scripts\jquery.backstretch.js" />
+    <Content Include="Scripts\jquery.backstretch.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\scripts.js" />
+    <Content Include="Style\bootstrap-theme.css" />
+    <Content Include="Style\bootstrap-theme.min.css" />
+    <Content Include="Style\bootstrap.css" />
+    <Content Include="Style\bootstrap.min.css" />
+    <Content Include="Style\Customer.css">
+      <DependentUpon>Customer.less</DependentUpon>
+    </Content>
+    <Content Include="Style\Customer.min.css">
+      <DependentUpon>Customer.css</DependentUpon>
+    </Content>
+    <Content Include="Style\Customers.css">
+      <DependentUpon>Customers.less</DependentUpon>
+    </Content>
+    <Content Include="Style\Customers.min.css">
+      <DependentUpon>Customers.css</DependentUpon>
+    </Content>
+    <Content Include="Style\CustomerSettings.css">
+      <DependentUpon>CustomerSettings.less</DependentUpon>
+    </Content>
+    <Content Include="Style\CustomerSettings.min.css">
+      <DependentUpon>CustomerSettings.css</DependentUpon>
+    </Content>
+    <Content Include="Style\Employee.css">
+      <DependentUpon>Employee.less</DependentUpon>
+    </Content>
+    <Content Include="Style\Employee.min.css">
+      <DependentUpon>Employee.css</DependentUpon>
+    </Content>
+    <Content Include="Style\form-elements.css" />
+    <Content Include="Style\MainPage.css">
+      <DependentUpon>MainPage.less</DependentUpon>
+    </Content>
+    <Content Include="Style\MainPage.min.css">
+      <DependentUpon>MainPage.css</DependentUpon>
+    </Content>
+    <Content Include="Style\normalize.css" />
+    <Content Include="Style\style.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ApiController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Filter\AuthorizeFilter.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DbConfiguration.cs" />
+    <Compile Include="Models\Sozlesme.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\Main\Index.cshtml" />
+    <Content Include="External\fontawesome-webfont.eot" />
+    <Content Include="External\fontawesome-webfont.ttf" />
+    <Content Include="External\fontawesome-webfont.woff" />
+    <Content Include="External\fontawesome-webfont.woff2" />
+    <Content Include="External\FontAwesome.otf" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Views\Shared\_LeftMenuPartial.cshtml" />
+    <Content Include="Views\Shared\_MainLayout.cshtml" />
+    <Content Include="Views\Shared\_TopMenuPartial.cshtml" />
+    <Content Include="Style\MainPage.less" />
+    <Content Include="Style\MainPage.css.map">
+      <DependentUpon>MainPage.css</DependentUpon>
+    </Content>
+    <Content Include="Views\Main\Customers.cshtml" />
+    <Content Include="Style\Customer.less" />
+    <Content Include="Style\bootstrap-theme.css.map" />
+    <Content Include="Style\bootstrap.css.map" />
+    <Content Include="Style\Customer.css.map">
+      <DependentUpon>Customer.css</DependentUpon>
+    </Content>
+    <Content Include="Views\Main\Customer.cshtml" />
+    <Content Include="Style\Customers.less" />
+    <Content Include="Style\Customers.css.map">
+      <DependentUpon>Customers.css</DependentUpon>
+    </Content>
+    <Content Include="Views\Main\Employees.cshtml" />
+    <Content Include="Views\Main\Employee.cshtml" />
+    <Content Include="Style\Employee.less" />
+    <Content Include="Style\Employee.css.map">
+      <DependentUpon>Employee.css</DependentUpon>
+    </Content>
+    <Content Include="Views\Main\CustomerSettings.cshtml" />
+    <Content Include="Style\CustomerSettings.less" />
+    <Content Include="Style\CustomerSettings.css.map">
+      <DependentUpon>CustomerSettings.css</DependentUpon>
+    </Content>
+    <Content Include="Views\Main\EmployeeSettings.cshtml" />
+    <Content Include="Views\Main\Services.cshtml" />
+    <Content Include="Views\Main\ServiceSettings.cshtml" />
+    <Content Include="Views\Main\StationSettings.cshtml" />
+    <Content Include="Views\Main\ServicesCalender.cshtml" />
+    <Content Include="Views\Main\Login.cshtml" />
+    <Content Include="Scripts\jquery-2.2.0.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Files\Image\" />
+    <Folder Include="Views\Api\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

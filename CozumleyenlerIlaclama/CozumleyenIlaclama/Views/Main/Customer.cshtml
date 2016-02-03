@@ -1,0 +1,416 @@
+﻿@{
+    ViewBag.Title = "CustomerEdit";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="col-xs-12">
+    <div class="col-xs-6 musteribilgileri" id="readOnlySelector">
+        <div class="row" id="m-up">
+            <span>Müşteri Bilgileri</span>
+            <img src="~/Image/nopicture.png" /><br /><br />
+        </div>
+        <div class="row">
+            <div class="col-xs-3 ">Müşteri Adı</div>
+            <div class="col-xs-8 " id="m-g-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 ">Fatura Ünvanı</div>
+            <div class="col-xs-8 " id="m-g-11"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 ">Hizmetler</div>
+            <div class="col-xs-8 " id="m-g-12"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 ">Sektör</div>
+            <div class="col-xs-8 " id="m-g-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 ">Firma Tipi</div>
+            <div class="col-xs-8 " id="m-g-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 ">İl</div>
+            <div class="col-xs-8 " id="m-g-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 ">İlçe</div>
+            <div class="col-xs-8 " id="m-g-6"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 ">Adres</div>
+            <div class="col-xs-8 " id="m-g-7"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 ">Email</div>
+            <div class="col-xs-8 " id="m-g-8"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 ">Telefon No</div>
+            <div class="col-xs-8 " id="m-g-9"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 ">Firma Türü</div>
+            <div class="col-xs-8 " id="m-g-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 ">Durum</div>
+            <div class="col-xs-8 " id="m-g-10"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 bm"></div>
+            <button class="btn btn-danger m-btn-iptal m-islem" id="m-iptal" style="display:none">İPTAL</button>
+            <button class="btn btn-primary m-btn-kaydet m-islem" id="m-guncelle" style="display:none">KAYDET</button>
+        </div>
+    </div>
+    <div class="col-xs-1">
+    </div>
+    <div class="col-xs-5">
+        <div class="y-baslik">
+            <span>Müşteri Yetkilisi</span>
+            <span class="fa fa-align-justify" id="y-toggle" style="float:right; padding-right:10px; cursor:pointer"></span>
+        </div>
+        <div class="temsilcibilgileri" id="m-t-l">
+        </div>
+    </div>
+    <div class="col-xs-1">
+    </div>
+    <div class="col-xs-5">
+        <div class="y-baslik">
+            <span>Müşteri Aktiviteleri</span>
+            <span class="fa fa-align-justify" id="a-toggle" style="float:right; padding-right:10px; cursor:pointer"></span>
+        </div>
+        <div class="musteriaktivite" id="m-a-l">
+        </div>
+    </div>
+</div>
+
+
+@*MÜŞTERİYE YETKİLİ ATAMA MODAL*@
+<div class="col-xs-20 modal fade" id="mdl-mya" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" style="text-align:center">Müşteriye Yetkili Ata</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-3">Ad</div>
+                    <div class="col-xs-8" id="y-a-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Soyad</div>
+                    <div class="col-xs-8" id="y-a-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Unvan</div>
+                    <div class="col-xs-8" id="y-a-3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Telefon</div>
+                    <div class="col-xs-8" id="y-a-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Email</div>
+                    <div class="col-xs-8" id="y-a-5"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" id="y-iptal" data-dismiss="modal">İptal</button>
+                <button class="btn btn-primary" id="y-kaydet">Kaydet</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*BİTİŞ*@
+@*MÜŞTERİYE YETKİLİ GUCELLEME MODAL*@
+<div class="col-xs-20 modal fade" id="mdl-myg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" style="text-align:center">Müşteri Yetkilisini Düzenle</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-3">Ad</div>
+                    <div class="col-xs-8" id="y-g-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Soyad</div>
+                    <div class="col-xs-8" id="y-g-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Unvan</div>
+                    <div class="col-xs-8" id="y-g-3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Telefon</div>
+                    <div class="col-xs-8" id="y-g-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Email</div>
+                    <div class="col-xs-8" id="y-g-5"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal" id="y-guncelleiptal">İptal</button>
+                <button class="btn btn-primary" id="y-guncelle">Kaydet</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*BİTİŞ*@
+@*HİZMET SÖZLEŞMESİ MODAL*@
+<div class="col-xs-12 modal fade" id="mdl-hsd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" style="text-align:center">Hizmet Sözleşmesi Düzenle</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row space">
+                    <div class="col-xs-1" style="margin-left:17px">Hizmetler</div>
+                    <div class="col-xs-5" id="h-s-6"></div>
+                    <div class="col-xs-2">Hizmet Sözleşmesi</div>
+                    <div class="col-xs-1" id="h-s-1" style="margin-left:-32px"></div>
+                    <button class="col-xs-2 btn btn-primary" id="sozlesmelistelestir" style="margin-left: 20px;">Listeleştir</button>
+                </div>
+                <div class="c">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" id="hs-iptal" data-dismiss="modal">İptal</button>
+                <button class="btn btn-primary" id="hs-kaydet">Kaydet</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*BİTİŞ*@
+@*EK SERVİS PLANLAMA MODAL*@
+<div class="col-xs-20 modal fade" id="mdl-esp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" style="text-align:center">Ek Servis Planlama</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row" style="margin-left:20px">
+                    <div class="col-xs-3" id="e-s-p1"></div>
+                    <div class="col-xs-3" id="e-s-p2"></div>
+                    <div class="col-xs-2" id="e-s-p3"></div>
+                    <div class="col-xs-3" id="e-s-p5"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal">İptal</button>
+                <button class="btn btn-primary" id="ekservis-kaydet">Kaydet</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*BİTİŞ*@
+@*İSTASYON TANIMLA*@
+<div class="col-xs-20 modal fade" id="mdl-istTanimla" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" style="text-align:center"> Yeni İstasyon Tanımla</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row space">
+                    <div class="col-xs-1" style="margin-left:17px">
+                        İstasyonlar
+                    </div>
+                    <div class="col-xs-5" id="i-t-1"></div>
+                    <div class="col-xs-2">İstasyon Sayısı</div>
+                    <div class="col-xs-1" id="i-t-2" style="margin-left:-81px;"></div>
+                    <button class="col-xs-2 btn btn-primary" id="istasyonlistelestir" style="margin-left: 20px;">Listeleştir</button>
+                </div>
+                <div class="d">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal">İptal</button>
+                <button class="btn btn-primary" id="musteriIstasyonKaydet">Kaydet</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*BİTİŞ*@
+@*İSTASYONLARI LİSTELE*@
+<div class="col-xs-20 modal fade" id="mdl-IstListele" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" style="text-align:center">İstasyon Listesi</h4>
+            </div>
+            <div class="col-xs-12 a">
+                <div id="istasyonlist"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*BİTİŞ*@
+@*İSTASYON GÜNCELLE*@
+<div class="col-xs-20 modal fade" id="mdl-IstGuncelle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" style="text-align:center">İstasyon Güncelle</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-3">İstasyon</div>
+                    <div class="col-xs-8" id="ist-g-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Tarih</div>
+                    <div class="col-xs-8" id="ist-g-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Yer</div>
+                    <div class="col-xs-8" id="ist-g-3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Açıklama</div>
+                    <div class="col-xs-8" id="ist-g-4"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal" id="IstIptal">İptal</button>
+                <button class="btn btn-primary" id="IstKaydet">Kaydet</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*BİTİŞ*@
+@*AKTİVİTE YONETİMİ*@
+<div class="col-xs-20 modal fade" id="mdl-AktiviteYonetimi" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" style="text-align:center">Aktivite Yönetimi</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-3">Aktivite</div>
+                    <div class="col-xs-8" id="akt-e-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Yetkili</div>
+                    <div class="col-xs-7" id="akt-e-2"></div>
+                    <button class="btn btn-default col-xs-1 fa fa-plus" id="yetkilimodalac"></button>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Aktivite notu</div>
+                    <div class="col-xs-8" id="akt-e-3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Aktivite Sonucu</div>
+                    <div class="col-xs-8" id="akt-e-4" style="margin-bottom:10px"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Hatırlatma</div>
+                    <div class="col-xs-8" id="akt-e-5" style="margin-bottom:10px"></div>
+                </div>
+                <div id="hatirlatmadiv" style="display:none">
+                    <div class="row">
+                        <div class="col-xs-3">Hatırlatma Mesajı</div>
+                        <div class="col-xs-8" id="akt-e-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3">Hatırlatma Tarihi</div>
+                        <div class="col-xs-8" id="akt-e-7"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal" id="AktiviteIptal">İptal</button>
+                <button class="btn btn-primary" id="AktiviteKaydet">Kaydet</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*BİTİŞ*@
+@*AKTİVİTE GÖR*@
+<div class="col-xs-20 modal fade" id="mdl-AktiviteDuzenle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" style="text-align:center">Aktivite Yönetimi</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-3">Aktivite</div>
+                    <div class="col-xs-8" id="akt-g-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Yetkili</div>
+                    <div class="col-xs-7" id="akt-g-2"></div>
+                    <button class="btn btn-default col-xs-1 fa fa-plus" id="yetkilimodalac"></button>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Aktivite notu</div>
+                    <div class="col-xs-8" id="akt-g-3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Aktivite Sonucu</div>
+                    <div class="col-xs-8" id="akt-g-4" style="margin-bottom:10px"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">Hatırlatma</div>
+                    <div class="col-xs-8" id="akt-g-5" style="margin-bottom:10px"></div>
+                </div>
+                <div id="hatirlatmagordiv" style="display:none">
+                    <div class="row">
+                        <div class="col-xs-3">Hatırlatma Mesajı</div>
+                        <div class="col-xs-8" id="akt-g-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3">Hatırlatma Tarihi</div>
+                        <div class="col-xs-8" id="akt-g-7"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal" id="AktiviteIptal">İptal</button>
+                <button class="btn btn-primary" id="AktiviteGuncelle">Güncelle</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*BİTİŞ*@
+<link href="~/Style/Customer.css" rel="stylesheet" />
+<script>
+    var customer = JSON.parse('@Html.Raw(ViewBag.SA)');
+</script>
+<script src="~/JS/PageScripts/customer.js"></script>

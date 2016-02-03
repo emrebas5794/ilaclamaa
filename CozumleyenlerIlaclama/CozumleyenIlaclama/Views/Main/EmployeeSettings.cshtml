@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "EmployeeSettings";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="content-inner">
+    <div class="row">
+        <div class="col-xs-2">Bölgeler</div>
+        <div class="col-xs-4 bosluk" id="e-a-1"></div>
+        <button class="btn btn-primary col-xs-1 bosluk" id="bolgesil">SİL</button>
+        <button class="btn btn-danger col-xs-1 bosluk" id="bolgeguncelle">GÜNCELLE</button>
+    </div>
+    <div class="row" id="bolgeguncellediv" style="display:none">
+        <div class="col-xs-2">Bölge Güncelle</div>
+        <div class="col-xs-4 bosluk" id="e-a-2"></div>
+        <button class="btn btn-warning col-xs-1 bosluk" id="bolgekaydet">KAYDET</button>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">Yeni Bölge</div>
+        <div class="col-xs-4 bosluk" id="e-a-3"></div>
+        <button class="btn btn-primary col-xs-1 bosluk" id="bolgeekle">YENİ EKLE</button>
+    </div>
+</div>
+
+<link href="~/Style/CustomerSettings.css" rel="stylesheet" />
+<script src="~/JS/PageScripts/employeesettings.js"></script>

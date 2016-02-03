@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "ServicesCalender";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="scheduler">
+
+</div>
+<script>
+    var service = JSON.parse('@Html.Raw(ViewBag.Data)');
+</script>
+<script src="~/JS/PageScripts/servicescalender.js"></script>
+<style>
+    td.dx-scheduler-date-table-cell {
+    pointer-events: none !important;
+    }
+    .dx-scheduler-appointment-tooltip-buttons{
+     display:none;
+    }
+</style>

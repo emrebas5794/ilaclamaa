@@ -1,0 +1,68 @@
+﻿
+<div class="leftmenu">
+    <div id="username">
+        <span>@ViewBag.Name</span>
+    </div>
+    <ul>
+        <li x-target="Main/Index">
+            <span class="m-icon fa fa-th-large"></span>
+            <span class="m-caption">Pano</span>
+            <span class="m-arrow "></span>
+        </li>
+        <li class="x-li-sub">
+            <span class="m-icon fa fa-star"></span>
+            <span class="m-caption">Müşteriler</span>
+            <span class="m-arrow fa fa-chevron-down"></span>
+        </li>
+        <li class="x-li-submenu">
+            <ul>
+                <li x-target="Main/Customers"><span class="m-caption">Müşteriler</span></li>
+            </ul>
+        </li>
+        <li class="x-li-sub">
+            <span class="m-icon fa fa-users"></span>
+            <span class="m-caption">Personeller</span>
+            <span class="m-arrow fa fa-chevron-down"></span>
+        </li>
+        <li class="x-li-submenu">
+            <ul>
+                <li x-target="Main/Employees"><span class="m-caption">Personeller Listesi</span></li>
+            </ul>
+        </li>
+        <li class="x-li-sub">
+            <span class="m-icon fa fa-cubes"></span>
+            <span class="m-caption">Hizmetler</span>
+            <span class="m-arrow fa fa-chevron-down"></span>
+        </li>
+        <li class="x-li-submenu">
+            <ul>
+                <li x-target="Main/Services"><span class="m-caption">Hizmet Listesi</span></li>
+            </ul>
+        </li>
+        <li class="x-li-sub">
+            <span class="m-icon fa fa-calendar"></span>
+            <span class="m-caption">Hizmet Takvimi</span>
+            <span class="m-arrow fa fa-chevron-down"></span>
+        </li>
+        <li class="x-li-submenu">
+            <ul>
+                <li x-target="Main/ServicesCalender"><span class="m-caption">Takvim</span></li>
+            </ul>
+        </li>
+        <li class="x-li-sub">
+            <span class="m-icon fa fa-cogs"></span>
+            <span class="m-caption">Ayarlar</span>
+            <span class="m-arrow fa fa-chevron-down"></span>
+        </li>
+        <li class="x-li-submenu">
+            <ul>
+                <li x-target="Main/CustomerSettings"><span class="m-caption">Müşteri Ayarları</span></li>
+                <li x-target="Main/EmployeeSettings"><span class="m-caption">Personel Ayarları</span></li>
+                <li x-target="Main/ServiceSettings"><span class="m-caption">Hizmet Ayarları</span></li>
+                <li x-target="Main/StationSettings"><span class="m-caption">İstasyon Ayarları</span></li>
+            </ul>
+        </li>
+       
+
+    </ul>
+</div>

@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "StationSettings";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="content-inner">
+    <div class="row">
+        <div class="col-xs-2">İstasyonlar</div>
+        <div class="col-xs-4 bosluk" id="ist-1"></div>
+        <button class="btn btn-primary col-xs-1 bosluk" id="istasyonsil">SİL</button>
+        <button class="btn btn-danger col-xs-1 bosluk" id="istasyonguncelle">GÜNCELLE</button>
+    </div>
+    <div class="IstGuncelle" style="display:none">
+        <div class="row">
+            <div class="col-xs-2">İstasyon Adı</div>
+            <div class="col-xs-4 bosluk" id="ist-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2">İstasyon Türü</div>
+            <div class="col-xs-4 bosluk" id="ist-6"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2">İstasyon Türü</div>
+            <div class="col-xs-4 bosluk" id="ist-7"></div>
+            <button class="btn btn-warning col-xs-1 bosluk" id="istasyonguncellekaydet">KAYDET</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2"></div>
+        <button class="btn btn-primary col-xs-4 bosluk" id="yeniIstasyon" style="margin-top:10px; margin-bottom:10px;"> Yeni İstasyon Ekle</button>
+    </div>
+
+    <div class="yeniIstEkle" style="display:none">
+        <div class="row">
+            <div class="col-xs-2">İstasyon Adı</div>
+            <div class="col-xs-4 bosluk" id="ist-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2">İstasyon Türü</div>
+            <div class="col-xs-4 bosluk" id="ist-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2">İstasyon Türü</div>
+            <div class="col-xs-4 bosluk" id="ist-4"></div>
+            <button class="btn btn-warning col-xs-1 bosluk" id="istasyonkaydet">KAYDET</button>
+        </div>
+    </div>
+</div>
+
+<link href="~/Style/CustomerSettings.css" rel="stylesheet" />
+<script src="~/JS/PageScripts/stationsettings.js"></script>

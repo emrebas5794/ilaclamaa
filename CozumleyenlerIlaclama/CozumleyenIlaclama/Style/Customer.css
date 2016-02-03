@@ -1,0 +1,232 @@
+﻿body .musteribilgileri {
+  padding: 26px;
+  height: 95%;
+  background-color: #fafafa;
+  box-shadow: 0px 0px 12px #aaa;
+}
+body .musteribilgileri #m-up span {
+  font-size: 25px;
+}
+body .musteribilgileri #m-up img {
+  width: 70px;
+  height: 70px;
+  float: right;
+}
+body .musteribilgileri .m-btn-kaydet {
+  margin-top: 15px;
+}
+body .musteribilgileri .m-btn-iptal {
+  margin-top: 15px;
+}
+body .temsilcibilgileri {
+  padding: 10px;
+  background-color: #fafafa;
+  box-shadow: 0px 5px 12px #aaa;
+}
+body .temsilcibilgileri .btn-yg {
+  margin-top: -25px;
+  float: right;
+  width: 16%;
+  padding-left: 1%;
+}
+body .temsilcibilgileri .btn-ys {
+  margin-top: -28px;
+  float: right;
+  width: 16%;
+}
+body .musteriaktivite {
+  padding: 10px;
+  background-color: #fafafa;
+  box-shadow: 0px 5px 12px #aaa;
+}
+body .musteriaktivite .btn-mag {
+  margin-top: -25px;
+  float: right;
+  width: 16%;
+  padding-left: 1%;
+}
+body .musteriaktivite .btn-mas {
+  margin-top: -28px;
+  float: right;
+  width: 16%;
+}
+body .y-baslik {
+  background-color: #fafafa;
+  box-shadow: 0px 0px 12px #aaa;
+  height: 60px;
+  padding-top: 26px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+.bm {
+  width: 26%;
+  float: left;
+}
+.m-islem {
+  float: left;
+  width: 28.4%;
+  margin-right: 40px;
+}
+#y-kaydet {
+  width: 15%;
+  margin-right: 6%;
+}
+#y-iptal {
+  width: 15%;
+}
+#y-guncelle {
+  width: 15%;
+  margin-right: 6%;
+}
+#y-guncelleiptal {
+  width: 15%;
+}
+#mdl-hsd .modal-dialog {
+  width: 90%;
+}
+#mdl-esp .modal-dialog {
+  width: 90%;
+}
+#mdl-istTanimla .modal-dialog {
+  width: 90%;
+}
+#mdl-hsd .c {
+  margin-left: 35px;
+}
+#mdl-istTanimla .d {
+  margin-left: 35px;
+}
+#mdl-istTanimla .d .numara {
+  width: 69px;
+  margin: 8px;
+}
+#mdl-IstListele .modal-dialog {
+  width: 70%;
+}
+#mdl-IstListele .num {
+  font-size: 25px;
+  float: left;
+  margin-top: 40px;
+  color: rgba(0, 0, 255, 0.5);
+}
+#mdl-IstListele .kapsayan {
+  float: left;
+  width: 200px;
+  height: 100px;
+}
+#mdl-IstListele .kapsayan div:nth-child(1) {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  width: 100%;
+}
+#mdl-IstListele .kapsayan div:nth-child(2) {
+  width: 100%;
+  padding-left: 10px;
+}
+#mdl-IstListele .kapsayan2 {
+  float: left;
+  width: 290px;
+  height: 1px;
+  /*.horizantal {
+            width: 400px;
+            margin-top: 15%;
+            position:absolute;
+            background: #ccc;
+            margin-left: 9px;
+            float: left;
+        }*/
+}
+#mdl-IstListele .kapsayan2 div:nth-child(1) {
+  margin-top: 20px;
+  padding-left: 10px;
+  width: 100%;
+}
+#mdl-IstListele .kapsayan2 div:nth-child(2) {
+  width: 100%;
+  padding-left: 10px;
+  float: left;
+  margin-top: 14px;
+}
+#mdl-IstListele .vertical {
+  width: 1px;
+  height: 80px;
+  background: #ccc;
+  float: left;
+}
+#mdl-IstListele .vertical2 {
+  width: 1px;
+  height: 80px;
+  background: #ccc;
+  float: left;
+  margin-left: 502px;
+}
+#mdl-IstListele .ad {
+  float: left;
+  width: 100px;
+}
+#mdl-IstListele .tarih {
+  float: left;
+  width: 100px;
+}
+#mdl-IstListele .IstbtnKapsayan {
+  float: right;
+  width: 100px;
+}
+#mdl-IstListele .IstbtnKapsayan .gIst {
+  width: 100%;
+  margin-top: 23px;
+  margin-bottom: 4px;
+}
+#mdl-IstListele .IstbtnKapsayan .sIst {
+  width: 100%;
+}
+#mdl-IstGuncelle {
+  z-index: 1001;
+}
+.space {
+  margin-bottom: 36px;
+}
+#yetkilimodalac {
+  font-size: 15px;
+  margin-top: 1px;
+  width: 37px;
+  margin-left: 12px;
+}
+#mdl-mya {
+  z-index: 1001;
+}
+#istasyonlist {
+  overflow: auto;
+  max-height: 500px;
+}
+.h {
+  float: left;
+  margin-right: 20%;
+  width: calc(60%);
+}
+.chk {
+  float: left;
+  margin-right: 30px;
+  width: 23px;
+  height: 23px;
+}
+.chk .checkicon {
+  position: absolute;
+  margin-top: -7px;
+  margin-left: -5px;
+}
+.g {
+  float: left;
+}
+.ds {
+  float: right;
+  margin-right: 3%;
+}
+.imgPersonel {
+  height: 57px;
+  border: 0.5px solid;
+  border-radius: 50%;
+  width: 50px;
+}
+/*# sourceMappingURL=Customer.css.map */
